@@ -33,10 +33,26 @@ public class CalculatorTests {
     }
 
     @Test
-    @DisplayName("multiply number by zero")
+    @DisplayName("multiply a number by zero")
     public void testMultiplicationByZero() {
         final Integer product = Calculator.multiply(0, 5);
 
         assertEquals(0, product);
     }
+
+    @Test
+    @DisplayName("multiply a negative and positive number")
+    public void testMultiplicationPosNeg() {
+        final Integer product = Calculator.multiply(-10, 5);
+
+        assertEquals(-50, product);
+    }
+    @Test
+    @DisplayName("multiply two negative numbers")
+    public void testMultiplicationNegNeg() {
+        final Integer product = Calculator.multiply(-10, -5);
+
+        assertEquals(50, product);
+    }
+    
     }
