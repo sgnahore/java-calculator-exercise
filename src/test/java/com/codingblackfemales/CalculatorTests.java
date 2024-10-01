@@ -23,4 +23,20 @@ public class CalculatorTests {
 
         assertEquals(-2, difference);
     }
-}
+
+    @Test
+    @DisplayName("multiply two numbers")
+    public void testMultiplication() {
+        final Integer product = Calculator.multiply(4, 5);
+
+        assertEquals(20, product);
+    }
+
+    @Test
+    @DisplayName("multiply number by zero")
+    public void testMultiplicationByZero() {
+        final Integer product = Calculator.multiply(0, 5);
+
+        assertEquals(0, product);
+    }
+    }
